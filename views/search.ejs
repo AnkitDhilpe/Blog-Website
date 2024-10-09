@@ -1,0 +1,18 @@
+
+    <div class="container">
+        <h1>
+           <%= search.title %>
+        </h1>
+        <ul class="article-ul">
+            <% search.forEach(post => { %>
+            <li>
+               <a href="/post/<%= post._id %>">
+                  <span><%= post.title %></span>
+                  <span class="article-list__date"><%= post.createdAt.toDateString(); %></span>
+               </a>
+            </li>
+            <% }) %>
+         
+   </ul>
+    </div>
+

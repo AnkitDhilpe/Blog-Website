@@ -1,0 +1,29 @@
+<div class="author">
+  <h1 class="author__heading">Hi, I am Ankit</h1>
+  <h3 class="author__body">
+    Am a MERN stack Developer and this is my Blog website
+  </h3>
+</div>
+<img class="hero-image" src="/img/man-journal.jpg" width="981" height="528" alt="man-journaling" />
+
+<section class="articles mt-2">
+  <h2 class="article-heading">Latest post</h2>
+
+  <ul class="article-ul">
+    <% data.forEach(post=> { %>
+      <li>
+        <a href="/post/<%= post._id %>" <%# /post/:id handlegetpostbyid %>
+          <span>
+            <%= post.title %>
+          </span>
+          <span class="article-list__date">
+            <%= post.createdAt.toDateString(); %>
+          </span>
+        </a>
+      </li>
+      <% }) %>
+  </ul>
+  <% if (nextPage !== null) { %>
+    <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+  <% } %>
+</section>

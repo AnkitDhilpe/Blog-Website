@@ -1,0 +1,22 @@
+
+    <a href="/dashboard">&larr; dashboard</a>
+    <h1 class="heading-compose mb-3">Edit Post</h1>
+   
+    <form class="compose-form" action="/edit-post/<%=data._id%>?_method=POST" method="POST">
+        <div class="mb-3 form-group">
+            <label for="exampleInputEmail1" class="form-label">Title</label>
+            <input type="text" class="form-control postTitle" name="posttitle" aria-describedby="postTitle" value="<%= data.title %>">
+        </div>
+
+        <div class="mb-3 form-group">
+            <label for="postContent">Post</label>
+            <div class="form-floating">
+                <textarea class="form-control" name="postbody" id="floatingTextarea" ><%= data.body %></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" value="Update">Publish</button>
+        <form action="/delete-post/<%= data._id %>?_method=DELETE" method="DELETE">
+            <input type="submit" value="Delete" class="btn-delete">
+        </form>
+
+    </form> 

@@ -1,0 +1,19 @@
+<div class="container">
+    <a href="/dashboard" class="go-dashboard">&larr; dashboard</a>
+    <h1 class="heading-compose mb-3">Compose</h1>
+    <form class="compose-form" action="/compose" method="post">
+        <div class="mb-3 form-group">
+            <label for="exampleInputEmail1" class="form-label">Title</label>
+            <input type="text" class="form-control postTitle" name="posttitle" aria-describedby="postTitle">
+        </div>
+
+        <div class="mb-3 form-group">
+            <label for="postContent">Post</label>
+            <div class="form-floating">
+                <textarea class="form-control" name="postbody" id="floatingTextarea"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Publish</button>
+
+    </form>
+</div>  
