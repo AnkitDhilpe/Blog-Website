@@ -16,9 +16,8 @@ import adminRoutes from "./routes/adminregisterRoutes.js";
 // import { insertpostData } from "./controllers/composeControllers.js";
 dotenv.config();
 const app = express();
-const port = 3000;
-const homeStartingContent ="Am a MERN stack Developer and this is my Blog website";
-const posts = [];
+const port = process.env.PORT || 3000;
+
 app.use(methodOverride('_method'))
 app.use(expressLayout)
 connectDB();
@@ -122,4 +121,4 @@ app.listen(port, () => {
   console.log("Server Started at http://localhost:3000");
 });
 
-export default posts;
+

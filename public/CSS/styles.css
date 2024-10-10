@@ -123,6 +123,7 @@ textarea {
 
 .author__body {
   /* font-size: 1.5rem; */
+  font-size: var(--font-size-md);
   font-weight: 700;
   margin: 5px 0px 15px 0px;
 }
